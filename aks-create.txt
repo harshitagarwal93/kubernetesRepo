@@ -1,0 +1,38 @@
+1. login to Azure
+az login
+
+2. Select a subscription
+az account set -xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+3. Create a resource group
+az group create --name mondayaks --location "west europe" --verbose
+
+ "name": "mondayaks"
+
+4. create a service principal
+>az ad sp -create-for-rbac
+
+{
+  "appId": "434b7a64-96f0-41bd-98d8-b19444c6ba90",
+  "displayName": "azure-cli-2020-03-02-09-11-34",
+  "name": "http://azure-cli-2020-03-02-09-11-34",
+  "password": "d07f1d55-e095-4a61-849d-d128c1389ef4",
+  "tenant": "771f1cf4-b1ac-4f2e-ad21-de39ea201e7e"
+}
+
+
+
+az group create -n mondayacr -l "west europe" --verbose 
+
+az acr create --name mondayacr -l "westeurope" --sku Standard --admin-enabled -g Mondayacr --verbose
+
+
+
+
+
+
+
+
+
+
+
