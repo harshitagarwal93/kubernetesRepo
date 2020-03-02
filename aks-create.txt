@@ -26,6 +26,8 @@ az group create -n mondayacr -l "west europe" --verbose
 
 az acr create --name mondayacr -l "westeurope" --sku Standard --admin-enabled -g Mondayacr --verbose
 
+az aks create --name mondayaks --location "west europe" -g "mondayaks" --kubernetes-version 1.16.1 --node-count 2 --generate-ssh-keys --admin-username citynextadmin --attach-acr /subscriptions/f0bb4697-5b29-46cc-8fc9-a4e5ac7800dc/resourceGroups/mondayacr/providers/Microsoft.ContainerRegistry/registries/mondayacr  --client-secret d07f1d55-e095-4a61-849d-d128c1389ef4 --service-principal 434b7a64-96f0-41bd-98d8-b19444c6ba90 --verbose
+
 
 
 
